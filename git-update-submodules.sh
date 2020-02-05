@@ -8,7 +8,7 @@ if [ -z $BRANCH ]; then
   exit 1;
 fi
 
-git checkout $BRANCH && git pull --ff origin $BRANCH
+git checkout $BRANCH
 
 git submodule sync
 git submodule init
