@@ -1,3 +1,6 @@
 [submodule "xpto"]
 	path = xpto
 	url = https://github.com/pedro-quirino/xpto.git
+[submodule "xpto2"]
+	path = xpto2
+	url = https://github.com/pedro-quirino/xpto2.git
