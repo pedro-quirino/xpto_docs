@@ -13,7 +13,6 @@ git checkout $BRANCH && git pull --ff origin $BRANCH
 git submodule sync
 git submodule init
 git submodule update --init --recursive
-git submodule foreach "(git checkout $BRANCH && git pull --ff origin $BRANCH && git push origin $BRANCH) || true"
 
 for i in $(git submodule foreach --quiet 'echo $path')
 do
@@ -21,6 +20,7 @@ do
   git add "$i"
 done
 
+git add .
 git commit -m "Updated $BRANCH branch of deployment repo to point to latest head of submodules"
 git push origin $BRANCH
 
