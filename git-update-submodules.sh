@@ -36,7 +36,7 @@ echo "Merging internal files..."
 pandoc -f markdown-yaml_metadata_block -o int/README.md $PARAMETER_PANDOC_INT
 
 echo "Merging all files..."
-pandoc -f markdown-yaml_metadata_block -o int/README.md ext/README.md
+pandoc -f markdown-yaml_metadata_block -o README.md int/README.md ext/README.md
 
 echo "Markdown files compiled successfully."
 
