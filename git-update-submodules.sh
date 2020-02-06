@@ -20,8 +20,8 @@ PARAMETER_PANDOC_INT=""
 
 for i in $(git submodule foreach --quiet 'echo $path')
 do
-	PARAMETER_PANDOC_EXT="$PARAMETER_PANDOC$i/ext/README.md "
-	PARAMETER_PANDOC_INT="$PARAMETER_PANDOC$i/int/README.md "
+	PARAMETER_PANDOC_EXT="$PARAMETER_PANDOC_EXT$i/ext/README.md "
+	PARAMETER_PANDOC_INT="$PARAMETER_PANDOC_INT$i/int/README.md "
 	echo "Adding $i to root repo"
 	git add "$i"
 done
